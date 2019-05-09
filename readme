@@ -1,0 +1,9 @@
+1. INSTALL IMAGE MAGICK
+For Mac : http://docs.wand-py.org/en/0.4.1/guide/install.html#install-imagemagick-mac
+2. INSTALL THE REQUIREMENTS :
+pip install -r requirements.txt
+3. RUN IT 
+python main.pyfilename_in filename_out text1 txt2
+eg :
+python main.py img.png out.png "Hola" "Buenos dias" 
+python main.py img.gif out.gif "Hola" "Buenos dias" 

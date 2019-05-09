@@ -1,0 +1,4 @@
+pillow
+imageio
+numpy
+Wand

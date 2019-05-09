@@ -1,0 +1,5 @@
+**/*.jpg
+**/*.gif
+**/*.jpeg
+**/*.png
+!frame.jpg
