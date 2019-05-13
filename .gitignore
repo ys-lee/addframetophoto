@@ -3,4 +3,6 @@
 **/*.jpeg
 **/*.png
 /venv/
+/photos/
+/out*/
 !frame.jpg
