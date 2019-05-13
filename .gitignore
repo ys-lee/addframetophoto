@@ -2,4 +2,5 @@
 **/*.gif
 **/*.jpeg
 **/*.png
+/venv/
 !frame.jpg
