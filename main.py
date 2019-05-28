@@ -231,17 +231,20 @@ for dir in dirs:
             photo_file = os.path.join(DIR_INPUT,dir,file)
             out_file = os.path.join(DIR_OUTPUT, file)
         else:
+            # file = message.txt
             with codecs.open(os.path.join(DIR_INPUT,dir,file), 'r', encoding='utf-8') as fp:
                 lines = fp.readlines()
                 if len(lines) == 1:
                     message = lines[0]
                 elif len(lines) >= 2:
                     message = lines[0]
-                    for i in range(1, len(lines)-2):
+                    for i in range(1, len(lines)-2+1):
                         message += lines[i]
                     user = lines[len(lines)-1].replace("By ", "")
     createPhoto(photo_file, out_file, message, user)
     for i in range(0,len(message)):
-        if ord(message[i]) >= 0xD800 and ord(message[i]) <= 0xDBFF:
+        if (ord(message[i]) >= 0xD800 and ord(message[i]) <= 0xDBFF) or (ord(message[i]) == 0xFE0F):
             print dir
+            print message
             print "===="
+            break
